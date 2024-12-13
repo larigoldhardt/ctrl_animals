@@ -1,0 +1,93 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendas</title>
+    <link rel="stylesheet" href="../css/pagina_base.css">
+    <link rel="stylesheet" href="../css/pagina_inicial.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/fazenda.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo_fundo.ico">
+</head>
+<body>
+    <div class="base2">
+        <a href="../html/pg_inicial.html"><img src="../img/voltar.png"  alt="voltar" class="voltar"/></a>
+        <h1 class="titulo-header">Fazendas/Lotes</h1>
+        <div class="user">
+            <img src="../img/icon-user.png" alt="usuario">
+            <span id="usuario-name">Usuário</span>
+        </div>
+    </div>
+    <main>
+        <section id="botoes-group">
+            <button class="btn-verde" id="openModalEntrada">Cadastrar Fazenda</button>
+            <button class="btn-verde" id="openModalSaida">Cadastrar Lote</button>
+        </section>
+        <section id="fazendas-container">
+            <!--Aqui será inserido a lista com javascript-->
+        </section>
+    </main>
+
+    <!-- Modal de Entrada-->
+    <div class="modal" id="modalEntrada">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtnE">&times;</span>
+            <div class="info-modal">
+                <img src="../img/fazendaicon.png" alt="icone fazend" />
+                <p class="alert"> Cadastre uma nova propriedade </p>
+                    
+            </div>
+            <form>
+                <label for="fazenda">Nome da Fazenda:</label>
+                <input type="text" id="fazenda" name="fazenda">
+                    
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+                    
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" placeholder="Ex: PR">
+                    
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Saida-->
+        <div class="modal" id="modalSaida">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtnS">&times;</span>
+                <div class="info-modal">
+                    <img src="../img/loteicon.png" alt="lote" />
+                    <p class="alert"> Cadastre um novo lote</p>
+                </div>
+                <form id="form-cadastro-lote">
+                    <label for="fazendaLote">Fazenda:</label>
+                    <select id="fazendaLote" name="fazenda">
+                        <option value="" disabled selected>Selecione uma fazenda</option>
+                        <!-- Opções serão carregadas via JavaScript -->
+                    </select>
+        
+                    <label for="reg">Registro:</label>
+                    <input type="text" id="reg" name="reg">
+        
+                    <label for="qtd_refeicoes">Quantidade de refeições:</label>
+                    <input type="number" id="qtd_refeicoes" name="qtd_refeicoes">
+        
+                    <label for="horario_refeicoes">Tempo entre refeições:</label>
+                    <input type="time" id="horario_refeicoes" name="horario_refeicoes">
+        
+                    <label for="qtd_alimento">Quantidade de alimento (kg):</label>
+                    <input type="number" step="0.01" id="qtd_alimento" name="qtd_alimento">
+        
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;2024 Ctrl Animals</p>
+        </footer>
+    <script src="../javascript/script_modal_fazenda.js"></script>
+    <script src="../javascript/usuario.js"></script>
+    <script src="../javascript/fazenda.js"></script>
+</body>
+</html>

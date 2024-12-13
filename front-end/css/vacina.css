@@ -1,0 +1,127 @@
+/* Seção principal */
+main {
+    padding: 20px;
+}
+
+/* Formulário de adicionar insumo */
+#adicionar-insumo {
+    background-color: #597e85;
+    border-radius: 8px;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    padding:50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#adicionar-insumo h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+#adicionar-insumo form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#adicionar-insumo label {
+    font-size: 14px;
+    color: #000;
+}
+
+#adicionar-insumo input,
+#adicionar-insumo select,
+#adicionar-insumo button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#adicionar-insumo button {
+    background-color: #15363c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#adicionar-insumo button:hover {
+    background-color: #15363c;
+}
+
+/* Informações do animal */
+#dados-animal {
+    background-color: #858b88;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding:30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#dados-animal h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+#dados-animal .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#dados-animal .info p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    flex: 1;
+}
+
+/* Histórico de vacinas */
+#vacinas {
+    background-color: #597e85;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding:50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+#vacinas h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+#vacinas table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#vacinas th, 
+#vacinas td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#vacinas th {
+    background-color: #15363c;
+    color: white;
+    font-weight: bold;
+}
+
+#vacinas tr:hover {
+    background-color: #f1f1f1;
+}
+
+#vacinas td {
+    font-size: 14px;
+    color: #555;
+}

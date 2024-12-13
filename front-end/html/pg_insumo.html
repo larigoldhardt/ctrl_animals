@@ -1,0 +1,153 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armázem Medicamento</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pagina_base.css">
+    <link rel="stylesheet" href="../css/pagina_inicial.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/tabela.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo_fundo.ico">
+</head>
+<body>
+    <div class="base2">
+        <a href="../html/pg_inicial.html"><img src="../img/voltar.png"  alt="voltar" class="voltar"/></a>
+        <h1 class="titulo-header">Armazém de Medicamentos</h1>
+        <div class="user">
+            <img src="../img/icon-user.png" alt="usuario">
+            <span id="usuario-name">Usuário</span>
+        </div>
+    </div>
+    <main>
+        <section id="botoes-group">
+            <button class="btn-verde" id="openModalCadastro">Cadastrar novo medicamento</button>
+            <button class="btn-verde" id="openModalEntrada" >Cadastrar entrada</button>
+            <button class="btn-verde" id="openModalSaida">Cadastrar saída</button>
+        </section>
+        <section id="insumoscadastrados">
+            <h3>Lista de medicamentos cadastrados</h3>
+            <!--Aqui será inserido a lista com javascript-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do medicamento</th>
+                        <th>Validade</th>
+                        <th>Quantidade em estoque</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+  
+                </tbody>
+            </table>
+            
+        </section>
+    </main>
+
+    <!-- Modal de Cadastro-->
+    <div class="modal" id="modalCadastro">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <p class="alert">
+                ⚠️Cadastre um novo medicamento, caso queira adicionar uma nova compra de um medicamento já cadastrado, favor retornar a tela anterior.
+            </p>
+            
+            <form id="cadastrarInsumo">
+                <label for="fazenda">Fazenda:</label>
+                <select id="fazendaSelect" name="fazenda">
+                    <option value="" disabled selected>Selecione uma fazenda</option>
+                        <!-- As opções serão carregadas dinamicamente via JavaScript -->
+                    </select>
+                <label for="insumo">Medicamento:</label>
+                <input type="text" id="insumoNovo" name="insumo">
+                
+                <label for="validade">Data de validade:</label>
+                <input type="date" id="validadeNovo" name="validade">
+                
+                <label for="quantidade">Quantidade Inicial:</label>
+                <input type="number" id="quantidadeNovo" name="quantidade">
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal de Entrada-->
+    <div class="modal" id="modalEntrada">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtnE">&times;</span>
+            <div class="info-modal">
+                <img src="../img/insumosSaude.png" alt="insumosSaude" />
+                <p class="alert">
+                    Cadastre uma nova entrada do insumo já cadastrado
+                </p>
+                    
+            </div>
+            <form id="form-Entrada">
+                <label for="fazenda">Fazenda:</label>
+                <select id="fazendaEn" name="fazenda">
+                    <option value="" disabled selected>Selecione uma fazenda</option>
+                    <!-- Fazendas serão carregadas dinamicamente -->
+                </select>
+
+                <label for="insumo">Medicamento:</label>
+                <select id="insumoEn" name="insumo">
+                    <option value="" disabled selected>Selecione um medicamento</option>
+                    <!-- As opções serão carregadas via JavaScript -->
+                </select>
+                    
+                <label for="validade">Data de validade:</label>
+                <input type="date" id="validadeEn" name="validade">
+                    
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidadeEn" name="quantidade">
+                    
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal de Saida-->
+        <div class="modal" id="modalSaida">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtnS">&times;</span>
+                <div class="info-modal">
+                    <img src="../img/insumosSaude.png" alt="insumosSaude" />
+                    <p class="alert">
+                        Cadastre uma nova saída de utilização do medicamento
+                    </p>
+                </div>
+                <form id="form-saida">
+                    <label for="fazenda">Fazenda:</label>
+                    <select id="fazendaSa" name="fazenda">
+                        <option value="" disabled selected>Selecione uma fazenda</option>
+                        <!-- Fazendas serão carregadas dinamicamente -->
+                    </select>
+
+                    <label for="insumoSa">Selecione um medicamento:</label>
+                    <select id="insumoSa" name="insumo">
+                        <option value="" disabled selected>Selecione um medicamento</option>
+                        <!-- As opções serão carregadas via JavaScript -->
+                    </select>
+                
+                    <label for="validade">Validade:</label>
+                    <input type="date" id="validadeSa" name="validade">
+                    
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidadeSa" name="quantidade">
+                    
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;2024 Ctrl Animals</p>
+        </footer>
+    <script src="../javascript/script_modal.js"></script>
+    <script src="../javascript/usuario.js"></script>
+    <script src="../javascript/cadastrarInsumo.js"></script>
+</body>
+</html>

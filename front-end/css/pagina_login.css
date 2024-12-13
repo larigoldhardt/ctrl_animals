@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#container-login {
+    margin-top: 100px;
+    margin-left: 33%;
+    background-color: #b0c5c9;
+    border-radius: 15px;
+    padding: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* cofigurações das duas entradas de nome_usuario e senha */
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* botão entrar */
+button {
+    background-color: #15363c;
+    color: white; 
+    border: none;
+    padding: 15px;
+    border-radius: 5px; /* tipo da borda */
+    cursor: pointer;
+    width: 100%; /* espaço entre o conteiner e o botão */
+    font-size: 16px; /* tamanho da fonte */
+}
+
+button:hover {
+    background-color: #15363c;
+}

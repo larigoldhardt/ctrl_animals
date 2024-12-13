@@ -1,0 +1,82 @@
+/* Seção de cabeçalho */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #dcdcdc;
+    gap: 15px;
+}
+
+.total-animais {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.botoes-acoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-acoes {
+    background-color: #003c47;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-acoes:hover {
+    background-color: #005c6b;
+}
+
+/* Tabela */
+.tabela-section {
+    padding: 20px;
+}
+
+.tabela-animais {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.tabela-animais thead {
+    background-color: #003c47;
+    color: #fff;
+}
+
+.tabela-animais th,
+.tabela-animais td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.tabela-animais tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Botões de ação na tabela */
+.btn-editar, .btn-vacina {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-editar i {
+    color: #005c6b;
+    font-size: 18px;
+}
+
+.btn-vacina i {
+    color: #006b6b;
+    font-size: 18px;
+}
+
+.btn-editar:hover i, .btn-vacina:hover i {
+    color: #003c47;
+}

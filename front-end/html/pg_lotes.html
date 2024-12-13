@@ -1,0 +1,147 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pagina_base.css">
+    <link rel="stylesheet" href="../css/pagina_inicial.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/lote.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo_fundo.ico">
+</head>
+<body>
+    <div class="base2">
+        <a href="../html/pg_inicial.html"><img src="../img/voltar.png"  alt="voltar" class="voltar"/></a>
+        <h1 class="titulo-header">Lote</h1>
+        <div class="user">
+            <img src="../img/icon-user.png" alt="usuario">
+            <span id="usuario-name">Usuário</span>
+        </div>
+    </div>
+    <main>
+        <!-- Total de Animais -->
+        <section class="header-section">
+            <div class="total-animais">
+                <span>Total de Animais Cadastrados:</span>
+                <span id="total-animais">______</span>
+            </div>
+            <div class="botoes-acoes">
+                <button class="btn-acoes" id="openModalEntrada">Rotina Alimentícia</button>
+                <button class="btn-acoes" id="openModalSaida">+ Adicionar Animal</button>
+                <button class="btn-acoes" id="openModalCadastro">Modo Vacinar</button>
+            </div>
+        </section>
+
+        <!-- Tabela de Animais -->
+        <section class="tabela-section">
+            <table class="tabela-animais">
+                <thead>
+                    <tr>
+                        <th>Identificação do brinco</th>
+                        <th>Raça</th>
+                        <th>Sexo</th>
+                        <th>Ano de nascimento</th>
+                        <th>Carteira de vacinação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas serão preenchidas dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modal de informações-->
+    <div class="modal" id="modalEntrada">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtnE">&times;</span>
+            <div class="info-modal">
+                <img src="../img/loteicon.png" alt="icone fazend" />
+                <p class="alert">
+                    Rotina alimentícia do LOTE
+                </p>      
+            </div>
+            <div id="infoLote">
+                <!-- Informações do lote serão carregadas aqui -->
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal de cadastro de animais-->
+    <div class="modal" id="modalSaida">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtnS">&times;</span>
+            <div class="info-modal">
+                <img src="../img/insumosSaude.png" alt="lote" />
+                <p class="alert">
+                    Cadastre um novo animal
+                </p>
+            </div>
+            <form id="form-cadastro-animais">
+              
+                <label for="brinco">Identificação do brinco:</label>
+                <input type="text" id="brinco" name="brinco" required placeholder="Ex.: 12345">
+                
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca" required placeholder="Ex.: Nelore">
+    
+                <label for="ano_nascimento">Ano de nascimento:</label>
+                <input type="number" id="ano_nascimento" name="ano_nascimento" required placeholder="Ex.: 2020">
+    
+                <label for="peso_inicial">Peso inicial (kg):</label>
+                <input type="number" id="peso_inicial" name="peso_inicial" required placeholder="Ex.: 350.0">
+    
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="" disabled selected>Selecione o sexo</option>
+                    <option value="M">Macho</option>
+                    <option value="F">Fêmea</option>
+                </select>
+    
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal do modo vacinar-->
+        <div class="modal" id="modalCadastro">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+                <div class="info-modal">
+                    <img src="../img/insumosSaude.png" alt="lote" />
+                    <p class="alert">
+                        Modo vacinar
+                    </p>
+                </div>
+                <form id="modo-vacinar">
+                    <label>
+                        <input type="checkbox" id="selecionarTodos" name="selecionarTodos">
+                        Selecionar Todos animais do lote
+                    </label>
+        
+                    <label for="insumo">Insumo:</label>
+                    <select id="insumo" name="insumo" required>
+                        <option value="" disabled selected>Selecione um insumo</option>
+                        <!-- Opções carregadas via JavaScript -->
+                    </select>
+        
+                    <label for="quantidade">Quantidade por animal:</label>
+                    <input type="number" id="quantidade" name="quantidade" required placeholder="Ex.: 10">
+        
+                    <label for="dataAplicacao">Data de aplicação:</label>
+                    <input type="date" id="dataAplicacao" name="dataAplicacao" required>
+        
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;2024 Ctrl Animals</p>
+        </footer>
+    <script src="../javascript/script_modal.js"></script>
+    <script src="../javascript/usuario.js"></script>
+    <script src="../javascript/lote.js"></script>
+</body>
+</html>

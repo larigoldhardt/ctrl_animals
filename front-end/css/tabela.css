@@ -1,0 +1,49 @@
+/* Estilização da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #e0e0e0;
+}
+
+thead th {
+    background-color: #003d4c; /* Cor do cabeçalho */
+    color: #ffffff; /* Cor do texto do cabeçalho */
+    padding: 10px;
+}
+
+tbody td {
+    background-color: #54777e; /* Cor das células */
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Células da coluna de validade */
+tbody td:nth-child(2) {
+    background-color: #757575; /* Cor para a validade */
+    color: #ffffff;
+}
+
+/* Células da coluna de estoque */
+tbody td:nth-child(3) {
+    background-color: #d0d0d0; /* Cor para a quantidade em estoque */
+    color: #000000;
+}
+
+/* Borda inferior */
+tbody tr {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Bordas da tabela */
+table, th, td {
+    border: none;
+}
+
+/* Espaçamento entre linhas */
+tbody tr:not(:last-child) {
+    margin-bottom: 5px;
+}
